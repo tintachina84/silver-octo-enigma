@@ -1,7 +1,5 @@
-import kotlin.jvm.internal.Intrinsics.Kotlin
-
 fun main(args: Array<String>) {
-    val kotlin: ClassExtension = ClassExtension()
+    val kotlin: Kotlin = Kotlin()
     kotlin.printBar()
     kotlin.printFoo()
     kotlin.printKotlin()
@@ -27,7 +25,7 @@ interface Bar {
     }
 }
 
-class ClassExtension : Foo, Bar {
+class Kotlin : Foo, Bar {
     override fun printKotlin() {
         super<Foo>.printKotlin()
         super<Bar>.printKotlin()
