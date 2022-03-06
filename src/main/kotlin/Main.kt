@@ -1,7 +1,8 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
+    val value = sum(5, 10, { x, y -> x + y })
+    println(value)
+}
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun sum(x: Int, y: Int, calculate: (Int, Int) -> Int): Int {
+    return calculate(x, y)
 }
